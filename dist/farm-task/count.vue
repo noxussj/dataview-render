@@ -1,6 +1,8 @@
 <template>
     <!--  -->
-    <div class="farm-task__count"></div>
+    <div class="farm-task__count">
+        <card-count2 :border="false" :data="data" layout="second"></card-count2>
+    </div>
 </template>
 
 <script lang="ts" setup>

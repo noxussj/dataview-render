@@ -1,6 +1,8 @@
 <template>
     <!-- 跨区作业类型占比 -->
-    <div class="farm-task__cross-zone"></div>
+    <div class="farm-task__cross-zone">
+        <pie-simple :data="data" :show-label-line="false" :show-legend="true"></pie-simple>
+    </div>
 </template>
 
 <script lang="ts" setup>

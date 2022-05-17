@@ -1,7 +1,6 @@
-<template>
-    <!-- 作业面积统计 -->
-    <div class="farm-task__working-area">
-        
+module.exports = (copy) => {
+    const map = {
+        'base-table': `
         <el-scrollbar height="100%">
             <table class="app-table">
                 <thead>
@@ -22,18 +21,11 @@
                 </tbody>
             </table>
         </el-scrollbar>
-        
-    </div>
-</template>
+        `,
+        'card-count2': `<card-count2 :border="false" :data="data" layout="second"></card-count2>`,
+        'barx-gradual': `<barx-gradual :bar-color="[['rgba(32, 93, 219, 1)', 'rgba(27, 223, 252, 1)']]" :data="data" :line-color="['rgba(255, 138, 0, 1)']" :option="{ yAxisTop: 40, yAxisName: '数量（万亩）', yAxisName2: '同比增长率（%）' }" show-background @handleClick="redirect"></barx-gradual>`,
+        'pie-simple': `<pie-simple :data="data" :show-label-line="false" :show-legend="true"></pie-simple>`
+    }
 
-<script lang="ts" setup>
-import { IWorkingArea } from '@/api/farm-task/index';
-
-const data = await IWorkingArea()
-</script>
-
-<style lang="scss" scoped>
-.farm-task__working-area {
-    height: 100%
+    return map[copy]
 }
-</style>

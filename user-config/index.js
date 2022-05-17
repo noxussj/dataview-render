@@ -11,21 +11,21 @@ module.exports = {
                     name: '',
                     key: 'count',
                     height: '25%',
-                    copy: 'count/base-count',
+                    copy: 'card-count2',
                     copyData: data1
                 },
                 {
                     name: '历年作业面积统计',
                     key: 'historical-area',
                     height: '35%',
-                    copy: 'echarts/barx-gradual',
+                    copy: 'barx-gradual',
                     copyData: data2
                 },
                 {
                     name: '各作业类型数据对比',
                     key: 'type-comparison',
                     height: '40%',
-                    copy: 'echarts/barx-gradual',
+                    copy: 'barx-gradual',
                     copyData: data3
                 }
             ]
@@ -41,7 +41,7 @@ module.exports = {
                     name: '作业面积统计',
                     key: 'working-area',
                     height: '30%',
-                    copy: 'table/base-table',
+                    copy: 'base-table',
                     copyData: data5
                 }
             ]
@@ -53,14 +53,14 @@ module.exports = {
                     name: '作业任务统计',
                     key: 'job-tasks',
                     height: '64%',
-                    copy: 'table/base-table',
+                    copy: 'base-table',
                     copyData: data5
                 },
                 {
                     name: '跨区作业类型占比',
                     key: 'cross-zone',
                     height: '36%',
-                    copy: 'echarts/pie-simple',
+                    copy: 'pie-simple',
                     copyData: data6
                 }
             ]

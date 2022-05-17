@@ -1,6 +1,6 @@
 <template>
     <!-- 农机作业 -->
-    <div class='src__views__home__model1'>
+    <div class='farm-task'>
         <to-layout height='100%' :orient="'horizontal'">
             <model :height="'100%'" :orient="'vertical'" :width="'27.5%'">
                 <sub-model :height="'25%'" title='' :width="'100%'">
@@ -15,7 +15,6 @@
             </model>
             <model :height="'100%'" :orient="'vertical'" :width="'45%'">
                 <sub-model :height="'70%'" title='' :width="'100%'">
-                    < />
                 </sub-model>
                 <sub-model :height="'30%'" title='作业面积统计' :width="'100%'">
                     <working-area />
@@ -43,7 +42,7 @@ import CrossZone from './cross-zone.vue' // 跨区作业类型占比
 </script>
 
 <style lang="scss">
-.src__views__home__model1 {
+.farm-task {
     height: 100%;
 }
 </style>

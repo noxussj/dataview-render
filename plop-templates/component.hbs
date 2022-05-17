@@ -1,32 +1,16 @@
 <template>
     <!-- {{name}} -->
-    <div class='{{rootStylePath}}'>
-        <to-layout height='100%' :orient="'horizontal'">
-            {{#each layout}}
-            <model :height="'100%'" :orient="'vertical'" :width="'{{this.width}}'">
-                {{#each this.children}}
-                <sub-model :height="'{{this.height}}'" title='{{this.name}}' :width="'100%'">
-                    <{{this.key}} />
-                </sub-model>
-                {{/each}}
-            </model>
-            {{/each}}
-        </to-layout>
-    </div>
+    <div class="{{parentKey}}__{{key}}"></div>
 </template>
 
 <script lang="ts" setup>
-{{#each layout}}
-{{#each this.children}}
-{{#if this.key}}
-import {{this.componentName}} from './{{this.key}}.vue' // {{this.name}}
-{{/if}}
-{{/each}}
-{{/each}}
+import { I{{componentNameUpper}} } from '@/api/{{parentKey}}/index';
+
+const data = await I{{componentNameUpper}}()
 </script>
 
-<style lang="scss">
-.{{rootStylePath}} {
-    height: 100%;
+<style lang="scss" scoped>
+.{{parentKey}}__{{key}} {
+    height: 100%
 }
 </style>

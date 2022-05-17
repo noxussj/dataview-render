@@ -1,0 +1,34 @@
+<template>
+    <!-- {{name}} -->
+    <div class='{{key}}'>
+        <to-layout height='100%' :orient="'horizontal'">
+            {{#each layout}}
+            <model :height="'100%'" :orient="'vertical'" :width="'{{this.width}}'">
+                {{#each this.children}}
+                <sub-model :height="'{{this.height}}'" title='{{this.name}}' :width="'100%'">
+                    {{#if this.key}}
+                    <{{this.key}} />
+                    {{/if}}
+                </sub-model>
+                {{/each}}
+            </model>
+            {{/each}}
+        </to-layout>
+    </div>
+</template>
+
+<script lang="ts" setup>
+{{#each layout}}
+{{#each this.children}}
+{{#if this.key}}
+import {{this.componentNameUpper}} from './{{this.key}}.vue' // {{this.name}}
+{{/if}}
+{{/each}}
+{{/each}}
+</script>
+
+<style lang="scss">
+.{{key}} {
+    height: 100%;
+}
+</style>

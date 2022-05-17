@@ -1,10 +1,7 @@
-/**
- * Plop 入口文件，需要导出一个函数
- * 此函数接收一个plop对象，用于创建生成器任务
- */
 module.exports = (plop) => {
+    const getOptions = require('./plop-options-handle/index.js')
+    const getActions = require('./plop-options-handle/utils/add-component-files.js')
     const del = require('./plop-utils/del.js')
-    const { options } = require('./plop-config/index.js')
 
     plop.setGenerator('noxussj new page', {
         description: 'new page',
@@ -23,12 +20,19 @@ module.exports = (plop) => {
                 // 清空目录
                 del('dist')
 
+                // 获取 options
+                const options = getOptions()
+
+                // 添加组件
                 actions.push({
                     type: 'add',
-                    path: 'dist/{{pageName}}/index.vue', // 输出目录
-                    templateFile: 'plop-templates/component.hbs', // 模板目录
+                    path: `dist/${options.key}/index.vue`, // 输出目录
+                    templateFile: 'plop-templates/index.hbs', // 模板目录
                     data: options // 配置项
                 })
+
+                // 添加子组件
+                actions.push(...getActions(options))
             }
 
             return actions

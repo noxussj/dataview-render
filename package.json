@@ -1,0 +1,21 @@
+{
+    "name": "dataview-render",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/noxussj/dataview-render.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/noxussj/dataview-render/issues"
+    },
+    "homepage": "https://github.com/noxussj/dataview-render#readme",
+    "dependencies": {
+        "del": "^6.1.0",
+        "plop": "2.7.4"
+    }
+}

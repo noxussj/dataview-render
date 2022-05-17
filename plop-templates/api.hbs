@@ -1,14 +1,14 @@
 import request from '@/plugins/axios'
 {{#each layout}}
-{{#each this.children}}
+{{#each children}}
 
-{{#if this.key}}
+{{#if key}}
 /**
- * {{this.name}}
+ * {{name}}
  */
-export const I{{this.componentNameUpper}}: any = (param: object) => {
+export const I{{toUpperCaseHump key}}: any = (param: object) => {
     return request({ url: '', param: param }, async (res: any) => {
-        const dist: any = {{{this.copyData}}}
+        const dist: any = {{{stringify copyData}}}
 
         return dist
     })

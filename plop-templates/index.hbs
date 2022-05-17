@@ -3,11 +3,11 @@
     <div class='{{key}}'>
         <to-layout height='100%' :orient="'horizontal'">
             {{#each layout}}
-            <model :height="'100%'" :orient="'vertical'" :width="'{{this.width}}'">
-                {{#each this.children}}
-                <sub-model :height="'{{this.height}}'" title='{{this.name}}' :width="'100%'">
-                    {{#if this.key}}
-                    <{{this.key}} />
+            <model :height="'100%'" :orient="'vertical'" :width="'{{width}}'">
+                {{#each children}}
+                <sub-model :height="'{{height}}'" title='{{name}}' :width="'100%'">
+                    {{#if key}}
+                    <{{key}} />
                     {{/if}}
                 </sub-model>
                 {{/each}}
@@ -19,9 +19,9 @@
 
 <script lang="ts" setup>
 {{#each layout}}
-{{#each this.children}}
-{{#if this.key}}
-import {{this.componentNameUpper}} from './{{this.key}}.vue' // {{this.name}}
+{{#each children}}
+{{#if key}}
+import {{toUpperCaseHump key}} from './{{key}}.vue' // {{name}}
 {{/if}}
 {{/each}}
 {{/each}}

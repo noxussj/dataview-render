@@ -1,4 +1,4 @@
-module.exports = (copy) => {
+const mapComponents = (copy) => {
     const map = {
         'base-table': `
         <el-scrollbar height="100%">
@@ -29,3 +29,5 @@ module.exports = (copy) => {
 
     return map[copy]
 }
+
+module.exports = { mapComponents }

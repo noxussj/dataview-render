@@ -34,12 +34,12 @@
 </template>
 
 <script lang="ts" setup>
-import  from './count.vue' // 
-import  from './historical-area.vue' // 历年作业面积统计
-import  from './type-comparison.vue' // 各作业类型数据对比
-import  from './working-area.vue' // 作业面积统计
-import  from './job-tasks.vue' // 作业任务统计
-import  from './cross-zone.vue' // 跨区作业类型占比
+import Count from './count.vue' // 
+import HistoricalArea from './historical-area.vue' // 历年作业面积统计
+import TypeComparison from './type-comparison.vue' // 各作业类型数据对比
+import WorkingArea from './working-area.vue' // 作业面积统计
+import JobTasks from './job-tasks.vue' // 作业任务统计
+import CrossZone from './cross-zone.vue' // 跨区作业类型占比
 </script>
 
 <style lang="scss">

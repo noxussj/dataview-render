@@ -1,0 +1,18 @@
+import request from '@/plugins/axios'
+{{#each layout}}
+{{#each this.children}}
+
+{{#if this.key}}
+/**
+ * {{this.name}}
+ */
+export const I{{this.componentNameUpper}}: any = (param: object) => {
+    return request({ url: '', param: param }, async (res: any) => {
+        const dist: any = {{{this.copyData}}}
+
+        return dist
+    })
+}
+{{/if}}
+{{/each}}
+{{/each}}

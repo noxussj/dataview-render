@@ -33,6 +33,14 @@ module.exports = (plop) => {
 
                 // 添加子组件
                 actions.push(...getActions(options))
+
+                // 添加api
+                actions.push({
+                    type: 'add',
+                    path: `dist/api/${options.key}/index.ts`, // 输出目录
+                    templateFile: 'plop-templates/api.hbs', // 模板目录
+                    data: options // 配置项
+                })
             }
 
             return actions

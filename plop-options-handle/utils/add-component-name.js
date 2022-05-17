@@ -8,6 +8,7 @@ module.exports = (options) => {
         item.children.forEach((x) => {
             x.componentNameUpper = toUpperCaseHump(x.key)
             x.componentNameLower = toLowerCaseHump(x.key)
+            x.copyData = JSON.stringify(x.copyData)
         })
     })
 }

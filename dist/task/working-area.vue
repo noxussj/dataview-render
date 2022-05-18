@@ -1,6 +1,6 @@
 <template>
     <!-- 作业面积统计 -->
-    <div class="farm-task__working-area">
+    <div class="task__working-area">
         
         <el-scrollbar height="100%">
             <table class="app-table">
@@ -12,7 +12,7 @@
                     <td>金额（元）</td>
                 </thead>
                 <tbody>
-                    <tr v-for="(item, index) in tableList" :key="index">
+                    <tr v-for="(item, index) in data" :key="index">
                         <td>{{ index + 1 }}</td>
                         <td>{{ item.region }}</td>
                         <td>{{ item.produce }}</td>
@@ -27,13 +27,13 @@
 </template>
 
 <script lang="ts" setup>
-import { IWorkingArea } from '@/api/farm-task/index';
+import { IWorkingArea } from '@/api/task/index';
 
 const data = await IWorkingArea()
 </script>
 
 <style lang="scss" scoped>
-.farm-task__working-area {
+.task__working-area {
     height: 100%
 }
 </style>

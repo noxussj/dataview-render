@@ -39,7 +39,7 @@ export const ITypeComparison: any = (param: object) => {
  */
 export const IWorkingArea: any = (param: object) => {
     return request({ url: '', param: param }, async (res: any) => {
-        const dist: any = [{"region":"内蒙古","produce":"玉米","source":"自销","price":"8675300"},{"region":"苏州","produce":"玉米","source":"自销","price":"6150000"},{"region":"重庆","produce":"玉米","source":"自销","price":"5249000"},{"region":"开封","produce":"玉米","source":"自销","price":"5239500"},{"region":"北京","produce":"玉米","source":"自销","price":"3375000"},{"region":"成都","produce":"玉米","source":"自销","price":"2755100"},{"region":"孝感","produce":"玉米","source":"自销","price":"1312000"}]
+        const dist: any = [{"region":"吉林","produce":"葡萄","source":"自销","price":"53154789.00 "},{"region":"石家庄","produce":"棉花","source":"自销","price":"1203950.00 "},{"region":"沈阳","produce":"小麦","source":"自销","price":"894657.00 "},{"region":"东莞","produce":"棉花","source":"自销","price":"352160.00 "},{"region":"义乌","produce":"棉花","source":"自销","price":"513710.00 "},{"region":"上海","produce":"苹果","source":"自销","price":"75461332.00 "}]
 
         return dist
     })
@@ -50,7 +50,7 @@ export const IWorkingArea: any = (param: object) => {
  */
 export const IJobTasks: any = (param: object) => {
     return request({ url: '', param: param }, async (res: any) => {
-        const dist: any = [{"region":"内蒙古","produce":"玉米","source":"自销","price":"8675300"},{"region":"苏州","produce":"玉米","source":"自销","price":"6150000"},{"region":"重庆","produce":"玉米","source":"自销","price":"5249000"},{"region":"开封","produce":"玉米","source":"自销","price":"5239500"},{"region":"北京","produce":"玉米","source":"自销","price":"3375000"},{"region":"成都","produce":"玉米","source":"自销","price":"2755100"},{"region":"孝感","produce":"玉米","source":"自销","price":"1312000"}]
+        const dist: any = [{"region":"吉林","produce":"葡萄","source":"自销","price":"53154789.00 "},{"region":"石家庄","produce":"棉花","source":"自销","price":"1203950.00 "},{"region":"沈阳","produce":"小麦","source":"自销","price":"894657.00 "},{"region":"东莞","produce":"棉花","source":"自销","price":"352160.00 "},{"region":"义乌","produce":"棉花","source":"自销","price":"513710.00 "},{"region":"上海","produce":"苹果","source":"自销","price":"75461332.00 "}]
 
         return dist
     })

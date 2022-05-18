@@ -5,7 +5,7 @@ module.exports = (actions, options) => {
                 actions.push({
                     type: 'add',
                     path: `dist/${options.key}/${x.key}.vue`,
-                    templateFile: 'plop-templates/component.hbs',
+                    templateFile: `plop-templates/components/${x.copy}.hbs`,
                     data: {
                         ...x,
                         parent: options

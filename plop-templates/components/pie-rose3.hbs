@@ -1,0 +1,18 @@
+<template>
+    <!-- {{name}} -->
+    <div class="{{parent.key}}__{{key}}">
+        <pie-rose3 :data="data"></pie-rose3>
+    </div>
+</template>
+
+<script lang="ts" setup>
+import { I{{toUpperCaseHump key}} } from '@/api/{{parent.key}}/index';
+
+const data = await I{{toUpperCaseHump key}}()
+</script>
+
+<style lang="scss" scoped>
+.{{parent.key}}__{{key}} {
+    height: 100%
+}
+</style>

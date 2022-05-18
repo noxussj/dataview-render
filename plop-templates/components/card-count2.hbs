@@ -1,18 +1,18 @@
 <template>
-    <!--  -->
-    <div class="task__count">
+    <!-- {{name}} -->
+    <div class="{{parent.key}}__{{key}}">
         <card-count2 v-for="(item, index) in data" :key="index" amount-format :data="[item]"></card-count2>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { ICount } from '@/api/task/index';
+import { I{{toUpperCaseHump key}} } from '@/api/{{parent.key}}/index';
 
-const data = await ICount()
+const data = await I{{toUpperCaseHump key}}()
 </script>
 
 <style lang="scss" scoped>
-.task__count {
+.{{parent.key}}__{{key}} {
     margin-bottom: 20px;
 
     .components__card-count2 {

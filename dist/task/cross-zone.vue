@@ -1,7 +1,7 @@
 <template>
     <!-- 跨区作业类型占比 -->
     <div class="task__cross-zone">
-        <pie-simple :data="data" :show-label-line="false" :show-legend="true"></pie-simple>
+        <pie-rose3 :data="data"></pie-rose3>
     </div>
 </template>
 

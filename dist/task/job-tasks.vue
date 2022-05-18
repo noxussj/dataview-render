@@ -1,7 +1,6 @@
 <template>
     <!-- 作业任务统计 -->
     <div class="task__job-tasks">
-        
         <el-scrollbar height="100%">
             <table class="app-table">
                 <thead>
@@ -13,7 +12,7 @@
                 </thead>
                 <tbody>
                     <tr v-for="(item, index) in data" :key="index">
-                        <td>{{ index + 1 }}</td>
+                        <td>{{ Number(index) + 1 }}</td>
                         <td>{{ item.region }}</td>
                         <td>{{ item.produce }}</td>
                         <td>{{ item.source }}</td>
@@ -22,11 +21,11 @@
                 </tbody>
             </table>
         </el-scrollbar>
-        
     </div>
 </template>
 
 <script lang="ts" setup>
+import { thousandFormat } from '@/libs/tools/amount-format'
 import { IJobTasks } from '@/api/task/index';
 
 const data = await IJobTasks()
@@ -34,6 +33,7 @@ const data = await IJobTasks()
 
 <style lang="scss" scoped>
 .task__job-tasks {
-    height: 100%
+    padding: 0 20px;
+    height: 100%;
 }
 </style>

@@ -1,7 +1,7 @@
 sales-amount.vue
 <template>
-    <!-- 历年作业面积统计 -->
-    <div class="task__historical-area">
+    <!-- {{name}} -->
+    <div class="{{parent.key}}__{{key}}">
         <barx-gradual
             :bar-color="[
                 ['rgba(0, 132, 254, 1)', 'rgba(0, 247, 255, 1)'],
@@ -16,13 +16,13 @@ sales-amount.vue
 </template>
 
 <script lang="ts" setup>
-import { IHistoricalArea } from '@/api/task/index';
+import { I{{toUpperCaseHump key}} } from '@/api/{{parent.key}}/index';
 
-const data = await IHistoricalArea()
+const data = await I{{toUpperCaseHump key}}()
 </script>
 
 <style lang="scss" scoped>
-.task__historical-area {
+.{{parent.key}}__{{key}} {
     height: 100%
 }
 </style>

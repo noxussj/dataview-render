@@ -60,7 +60,7 @@ module.exports = {
                     name: '跨区作业类型占比',
                     key: 'cross-zone',
                     height: '36%',
-                    copy: 'pie-simple',
+                    copy: 'pie-rose3',
                     copyData: data6
                 }
             ]

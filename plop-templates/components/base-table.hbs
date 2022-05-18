@@ -1,6 +1,6 @@
 <template>
-    <!-- 作业面积统计 -->
-    <div class="task__working-area">
+    <!-- {{name}} -->
+    <div class="{{parent.key}}__{{key}}">
         <el-scrollbar height="100%">
             <table class="app-table">
                 <thead>
@@ -12,11 +12,11 @@
                 </thead>
                 <tbody>
                     <tr v-for="(item, index) in data" :key="index">
-                        <td>{{ Number(index) + 1 }}</td>
-                        <td>{{ item.region }}</td>
-                        <td>{{ item.produce }}</td>
-                        <td>{{ item.source }}</td>
-                        <td>￥{{ thousandFormat(item.price, 2) }}</td>
+                        <td>\{{ Number(index) + 1 }}</td>
+                        <td>\{{ item.region }}</td>
+                        <td>\{{ item.produce }}</td>
+                        <td>\{{ item.source }}</td>
+                        <td>￥\{{ thousandFormat(item.price, 2) }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -26,13 +26,13 @@
 
 <script lang="ts" setup>
 import { thousandFormat } from '@/libs/tools/amount-format'
-import { IWorkingArea } from '@/api/task/index';
+import { I{{toUpperCaseHump key}} } from '@/api/{{parent.key}}/index';
 
-const data = await IWorkingArea()
+const data = await I{{toUpperCaseHump key}}()
 </script>
 
 <style lang="scss" scoped>
-.task__working-area {
+.{{parent.key}}__{{key}} {
     padding: 0 20px;
     height: 100%;
 }

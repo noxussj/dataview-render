@@ -1,6 +1,6 @@
 <template>
     <!-- {{name}} -->
-    <div class="{{parent.key}}__{{key}}">
+    <div class="{{modelClassName parent.prefix}}{{parent.key}}__{{key}}">
         <el-scrollbar height="100%">
             <table class="app-table">
                 <thead>
@@ -26,13 +26,13 @@
 
 <script lang="ts" setup>
 import { thousandFormat } from '@/libs/tools/amount-format'
-import { I{{toUpperCaseHump key}} } from '@/api/{{parent.key}}/index';
+import { I{{toUpperCaseHump key}} } from '@/api/{{parent.prefix}}{{parent.key}}/index';
 
 const data = await I{{toUpperCaseHump key}}()
 </script>
 
 <style lang="scss" scoped>
-.{{parent.key}}__{{key}} {
+.{{modelClassName parent.prefix}}{{parent.key}}__{{key}} {
     padding: 0 20px;
     height: 100%;
 }

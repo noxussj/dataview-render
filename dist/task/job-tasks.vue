@@ -1,6 +1,6 @@
 <template>
     <!-- 作业任务统计 -->
-    <div class="task__job-tasks">
+    <div class="overview__machine__task__job-tasks">
         <el-scrollbar height="100%">
             <table class="app-table">
                 <thead>
@@ -26,13 +26,13 @@
 
 <script lang="ts" setup>
 import { thousandFormat } from '@/libs/tools/amount-format'
-import { IJobTasks } from '@/api/task/index';
+import { IJobTasks } from '@/api/overview/machine/task/index';
 
 const data = await IJobTasks()
 </script>
 
 <style lang="scss" scoped>
-.task__job-tasks {
+.overview__machine__task__job-tasks {
     padding: 0 20px;
     height: 100%;
 }

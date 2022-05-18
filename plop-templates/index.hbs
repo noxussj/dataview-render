@@ -1,6 +1,6 @@
 <template>
     <!-- {{name}} -->
-    <div class='{{key}}'>
+    <div class='{{modelClassName prefix}}{{key}}'>
         <to-layout height='100%' :orient="'horizontal'">
             {{#each layout}}
             <model :height="'100%'" :orient="'vertical'" :width="'{{width}}'">
@@ -28,7 +28,7 @@ import {{toUpperCaseHump key}} from './{{key}}.vue' // {{name}}
 </script>
 
 <style lang="scss">
-.{{key}} {
+.{{modelClassName prefix}}{{key}} {
     height: 100%;
 }
 </style>

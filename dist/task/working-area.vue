@@ -1,6 +1,6 @@
 <template>
     <!-- 作业面积统计 -->
-    <div class="task__working-area">
+    <div class="overview__machine__task__working-area">
         <el-scrollbar height="100%">
             <table class="app-table">
                 <thead>
@@ -26,13 +26,13 @@
 
 <script lang="ts" setup>
 import { thousandFormat } from '@/libs/tools/amount-format'
-import { IWorkingArea } from '@/api/task/index';
+import { IWorkingArea } from '@/api/overview/machine/task/index';
 
 const data = await IWorkingArea()
 </script>
 
 <style lang="scss" scoped>
-.task__working-area {
+.overview__machine__task__working-area {
     padding: 0 20px;
     height: 100%;
 }

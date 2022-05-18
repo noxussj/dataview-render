@@ -1,7 +1,7 @@
 sales-amount.vue
 <template>
     <!-- 各作业类型数据对比 -->
-    <div class="task__type-comparison">
+    <div class="overview__machine__task__type-comparison">
         <barx-gradual
             :bar-color="[
                 ['rgba(0, 132, 254, 1)', 'rgba(0, 247, 255, 1)'],
@@ -16,13 +16,13 @@ sales-amount.vue
 </template>
 
 <script lang="ts" setup>
-import { ITypeComparison } from '@/api/task/index';
+import { ITypeComparison } from '@/api/overview/machine/task/index';
 
 const data = await ITypeComparison()
 </script>
 
 <style lang="scss" scoped>
-.task__type-comparison {
+.overview__machine__task__type-comparison {
     height: 100%
 }
 </style>

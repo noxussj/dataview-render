@@ -3,6 +3,7 @@ const { data1, data2, data3, data5, data6 } = require('../user-data/index.js')
 module.exports = {
     name: '农机作业',
     key: 'task',
+    prefix: 'overview/machine/',
     layout: [
         {
             width: '27.5%',

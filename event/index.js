@@ -12,4 +12,8 @@ module.exports = (plop) => {
     plop.setHelper('stringify', function (str) {
         return JSON.stringify(str)
     })
+
+    plop.setHelper('modelClassName', function (str) {
+        return str.split('/').join('__')
+    })
 }

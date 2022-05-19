@@ -61,7 +61,7 @@ export const IJobTasks: any = (param: object) => {
  */
 export const ICrossZone: any = (param: object) => {
     return request({ url: '', param: param }, async (res: any) => {
-        const dist: any = [{"name":"未种植","value":170800,"unit":"亩"},{"name":"已种植","value":2965000,"unit":"亩"}]
+        const dist: any = [{"name":"除草剂","value":29954000,"unit":"元"},{"name":"杀虫剂","value":33872000,"unit":"元"},{"name":"杀菌剂","value":48978150,"unit":"元"},{"name":"杀线虫剂","value":22321800,"unit":"元"}]
 
         return dist
     })

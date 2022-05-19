@@ -1,31 +1,32 @@
-const { data1, data2, data3, data5, data6 } = require('../user-data/index.js')
+const { data1, data2, data3, data4, data5, data6 } = require('../user-data/index.js')
 
 module.exports = {
     name: '农机作业',
-    key: 'task',
+    key: 'subsidy',
     prefix: 'overview/machine/',
     layout: [
         {
             width: '27.5%',
+            height: '100%',
             children: [
                 {
                     name: '',
                     key: 'count',
-                    height: '25%',
+                    height: '0%',
                     copy: 'card-count2',
                     copyData: data1
                 },
                 {
-                    name: '历年作业面积统计',
-                    key: 'historical-area',
-                    height: '35%',
+                    name: '地区补贴金额统计',
+                    key: 'region-amount',
+                    height: '48%',
                     copy: 'barx-gradual',
                     copyData: data2
                 },
                 {
-                    name: '各作业类型数据对比',
-                    key: 'type-comparison',
-                    height: '40%',
+                    name: '农机类型补贴统计',
+                    key: 'machine-type',
+                    height: '52%',
                     copy: 'barx-gradual',
                     copyData: data3
                 }
@@ -33,35 +34,32 @@ module.exports = {
         },
         {
             width: '45%',
-            children: [
-                {
-                    name: '',
-                    height: '70%'
-                },
-                {
-                    name: '作业面积统计',
-                    key: 'working-area',
-                    height: '30%',
-                    copy: 'base-table',
-                    copyData: data5
-                }
-            ]
+            height: '0%',
+            children: []
         },
         {
             width: '27.5%',
+            height: '100%',
             children: [
                 {
+                    name: '',
+                    key: 'count2',
+                    height: '0%',
+                    copy: 'card-count2',
+                    copyData: data4
+                },
+                {
                     name: '作业任务统计',
-                    key: 'job-tasks',
-                    height: '64%',
-                    copy: 'base-table',
+                    key: 'job-task',
+                    height: '48%',
+                    copy: 'barx-gradual',
                     copyData: data5
                 },
                 {
-                    name: '跨区作业类型占比',
-                    key: 'cross-zone',
-                    height: '36%',
-                    copy: 'pie-rose3',
+                    name: '补贴进度统计',
+                    key: 'progress',
+                    height: '52%',
+                    copy: 'barx-gradual',
                     copyData: data6
                 }
             ]

@@ -3,7 +3,7 @@
     <div class='{{modelClassName prefix}}{{key}}'>
         <to-layout height='100%' :orient="'horizontal'">
             {{#each layout}}
-            <model :height="'100%'" :orient="'vertical'" :width="'{{width}}'">
+            <model :height="'{{height}}'" :orient="'vertical'" :width="'{{width}}'">
                 {{#each children}}
                 <sub-model :height="'{{height}}'" title='{{name}}' :width="'100%'">
                     {{#if key}}
@@ -30,5 +30,9 @@ import {{toUpperCaseHump key}} from './{{key}}.vue' // {{name}}
 <style lang="scss">
 .{{modelClassName prefix}}{{key}} {
     height: 100%;
+
+    .block__layout {
+        align-items: flex-end;
+    }
 }
 </style>

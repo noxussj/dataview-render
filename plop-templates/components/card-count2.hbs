@@ -1,7 +1,7 @@
 <template>
     <!-- {{name}} -->
     <div class="{{modelClassName parent.prefix}}{{parent.key}}__{{key}}">
-        <card-count2 v-for="(item, index) in data" :key="index" amount-format :data="[item]"></card-count2>
+        <card-count2 amount-format :data="data"></card-count2>
     </div>
 </template>
 

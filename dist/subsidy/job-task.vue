@@ -1,7 +1,6 @@
-sales-amount.vue
 <template>
-    <!-- 各作业类型数据对比 -->
-    <div class="overview__machine__task__type-comparison">
+    <!-- 作业任务统计 -->
+    <div class="overview__machine__subsidy__job-task">
         <barx-gradual
             :bar-color="[
                 ['rgba(0, 132, 254, 1)', 'rgba(0, 247, 255, 1)'],
@@ -16,13 +15,13 @@ sales-amount.vue
 </template>
 
 <script lang="ts" setup>
-import { ITypeComparison } from '@/api/overview/machine/task/index';
+import { IJobTask } from '@/api/overview/machine/subsidy/index';
 
-const data = await ITypeComparison()
+const data = await IJobTask()
 </script>
 
 <style lang="scss" scoped>
-.overview__machine__task__type-comparison {
+.overview__machine__subsidy__job-task {
     height: 100%
 }
 </style>

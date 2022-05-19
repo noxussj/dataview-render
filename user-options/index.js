@@ -57,7 +57,7 @@ module.exports = {
                 },
                 {
                     name: '补贴进度统计',
-                    key: 'progress',
+                    key: 'progress-count',
                     height: '52%',
                     copy: 'barx-gradual',
                     copyData: data6

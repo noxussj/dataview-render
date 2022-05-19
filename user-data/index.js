@@ -73,27 +73,18 @@ const data5 = {
 }
 
 // 补贴进度统计
-const data6 = [
-    {
-        name: '除草剂',
-        value: 29954000.0,
-        unit: '元'
-    },
-    {
-        name: '杀虫剂',
-        value: 33872000.0,
-        unit: '元'
-    },
-    {
-        name: '杀菌剂',
-        value: 48978150.0,
-        unit: '元'
-    },
-    {
-        name: '杀线虫剂',
-        value: 22321800.0,
-        unit: '元'
-    }
-]
+const data6 = {
+    series: [
+        {
+            name: '计划用水量',
+            data: [17.08, 2.07, 6.41, 1.13, 3.98, 2.61]
+        },
+        {
+            name: '实际用水量',
+            data: [14.86, 2.21, 5.77, 1.03, 3.7, 2.49]
+        }
+    ],
+    axis: ['棉花', '玉米', '小麦', '红枣', '苹果', '葡萄']
+}
 
 module.exports = { data1, data2, data3, data4, data5, data6 }

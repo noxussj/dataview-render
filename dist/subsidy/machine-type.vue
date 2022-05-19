@@ -1,7 +1,6 @@
-sales-amount.vue
 <template>
-    <!-- 历年作业面积统计 -->
-    <div class="overview__machine__task__historical-area">
+    <!-- 农机类型补贴统计 -->
+    <div class="overview__machine__subsidy__machine-type">
         <barx-gradual
             :bar-color="[
                 ['rgba(0, 132, 254, 1)', 'rgba(0, 247, 255, 1)'],
@@ -16,13 +15,13 @@ sales-amount.vue
 </template>
 
 <script lang="ts" setup>
-import { IHistoricalArea } from '@/api/overview/machine/task/index';
+import { IMachineType } from '@/api/overview/machine/subsidy/index';
 
-const data = await IHistoricalArea()
+const data = await IMachineType()
 </script>
 
 <style lang="scss" scoped>
-.overview__machine__task__historical-area {
+.overview__machine__subsidy__machine-type {
     height: 100%
 }
 </style>

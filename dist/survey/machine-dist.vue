@@ -1,6 +1,6 @@
 <template>
-    <!-- 补贴进度统计 -->
-    <div class="overview__machine__subsidy__progress-count">
+    <!-- 新疆农机数量分布统计 -->
+    <div class="overview__machine__survey__machine-dist">
         <barx-gradual
             :bar-color="[
                 ['rgba(0, 132, 254, 1)', 'rgba(0, 247, 255, 1)'],
@@ -15,13 +15,13 @@
 </template>
 
 <script lang="ts" setup>
-import { IProgressCount } from '@/api/overview/machine/subsidy/index';
+import { IMachineDist } from '@/api/overview/machine/survey/index';
 
-const data = await IProgressCount()
+const data = await IMachineDist()
 </script>
 
 <style lang="scss" scoped>
-.overview__machine__subsidy__progress-count {
+.overview__machine__survey__machine-dist {
     height: 100%
 }
 </style>

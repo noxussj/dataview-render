@@ -1,18 +1,18 @@
 <template>
     <!--  -->
-    <div class="overview__machine__subsidy__count2">
-        <card-count2 v-for="(item, index) in data" :key="index" amount-format :data="[item]"></card-count2>
+    <div class="overview__machine__survey__count2">
+        <card-count2 amount-format :data="data"></card-count2>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { ICount2 } from '@/api/overview/machine/subsidy/index';
+import { ICount2 } from '@/api/overview/machine/survey/index';
 
 const data = await ICount2()
 </script>
 
 <style lang="scss" scoped>
-.overview__machine__subsidy__count2 {
+.overview__machine__survey__count2 {
     margin-bottom: 20px;
 
     .components__card-count2 {

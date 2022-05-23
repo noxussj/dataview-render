@@ -1,6 +1,6 @@
 <template>
-    <!-- 作业任务统计 -->
-    <div class="overview__machine__subsidy__job-task">
+    <!-- 农机类型统计 -->
+    <div class="overview__machine__survey__machine-type">
         <barx-gradual
             :bar-color="[
                 ['rgba(0, 132, 254, 1)', 'rgba(0, 247, 255, 1)'],
@@ -15,13 +15,13 @@
 </template>
 
 <script lang="ts" setup>
-import { IJobTask } from '@/api/overview/machine/subsidy/index';
+import { IMachineType } from '@/api/overview/machine/survey/index';
 
-const data = await IJobTask()
+const data = await IMachineType()
 </script>
 
 <style lang="scss" scoped>
-.overview__machine__subsidy__job-task {
+.overview__machine__survey__machine-type {
     height: 100%
 }
 </style>

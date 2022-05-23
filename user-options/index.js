@@ -20,7 +20,7 @@ module.exports = {
                     name: '当前使用状态统计',
                     key: 'vehicle-status',
                     height: '30%',
-                    copy: '',
+                    copy: 'empty',
                     copyData: data2
                 },
                 {

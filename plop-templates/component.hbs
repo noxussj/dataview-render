@@ -1,7 +1,7 @@
 <template>
     <!-- {{name}} -->
-    <div class="{{modelClassName prefix}}{{parent.key}}__{{key}}">
-        {{{copyComponent copy}}}
+    <div class="{{modelClassName parent.prefix}}{{parent.key}}__{{key}}">
+        {{key}}
     </div>
 </template>
 
@@ -12,7 +12,7 @@ const data = await I{{toUpperCaseHump key}}()
 </script>
 
 <style lang="scss" scoped>
-.{{modelClassName prefix}}{{parent.key}}__{{key}} {
+.{{modelClassName parent.prefix}}{{parent.key}}__{{key}} {
     height: 100%
 }
 </style>

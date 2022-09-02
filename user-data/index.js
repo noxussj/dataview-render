@@ -1,104 +1,209 @@
-// 统计模块
+// 资源状况
 const data1 = [
     {
-        name: '实际耕地面积',
-        value: 1.06,
-        unit: '亿亩'
+        name: '农户数量',
+        value: 23,
+        unit: '户'
     },
     {
-        name: '实际耕地面积',
-        value: 1.06,
-        unit: '亿亩'
+        name: '大蚕房数',
+        value: 34,
+        unit: '个'
+    },
+    {
+        name: '桑园数量',
+        value: 34,
+        unit: '个'
+    },
+    {
+        name: '小蚕共育房',
+        value: 34,
+        unit: '个'
+    },
+    {
+        name: '蚕房总面积',
+        value: 232,
+        unit: '亩'
+    },
+    {
+        name: '桑园占地总面积',
+        value: 132,
+        unit: '亩'
     }
 ]
 
-// 当前使用状态统计
+// 今年计划与进展
 const data2 = {
-    series: [
+    count: [
         {
-            name: '种植面积',
-            data: [3752.85, 1576.58, 1603.52, 620.2425, 102.9645, 184.452]
-        }
-    ],
-    axis: ['棉花', '玉米', '小麦', '红枣', '苹果', '葡萄']
-}
-
-// 农机类型统计
-const data3 = {
-    series: [
-        {
-            name: '种植面积',
-            data: [3752.85, 1576.58, 1603.52, 620.2425, 102.9645, 184.452]
-        }
-    ],
-    axis: ['棉花', '玉米', '小麦', '红枣', '苹果', '葡萄']
-}
-
-// 年作业量农机统计
-const data4 = {
-    series: [
-        {
-            name: '种植面积',
-            data: [3752.85, 1576.58, 1603.52, 620.2425, 102.9645, 184.452]
-        }
-    ],
-    axis: ['棉花', '玉米', '小麦', '红枣', '苹果', '葡萄']
-}
-
-// 统计模块2
-const data5 = [
-    {
-        name: '实际耕地面积',
-        value: 1.06,
-        unit: '亿亩'
-    },
-    {
-        name: '实际耕地面积',
-        value: 1.06,
-        unit: '亿亩'
-    }
-]
-
-// 新疆农机数量分布统计
-const data6 = {
-    series: [
-        {
-            name: '计划用水量',
-            data: [17.08, 2.07, 6.41, 1.13, 3.98, 2.61]
+            name: '计划总批次',
+            value: 5,
+            unit: '次'
         },
         {
-            name: '实际用水量',
-            data: [14.86, 2.21, 5.77, 1.03, 3.7, 2.49]
-        }
-    ],
-    axis: ['棉花', '玉米', '小麦', '红枣', '苹果', '葡萄']
-}
-
-// 农机厂家占比分析
-const data7 = [
-    {
-        name: '雷沃',
-        value: 10
-    },
-    {
-        name: '东方红',
-        value: 10
-    },
-    {
-        name: '久保田',
-        value: 10
-    }
-]
-
-// 总动力/配套总动力统计
-const data8 = {
-    series: [
+            name: '预计产量',
+            value: 392830,
+            unit: 'kg'
+        },
         {
-            name: '计划用水量',
-            data: [17.08, 2.07, 6.41, 1.13, 3.98, 2.61]
+            name: '已完成产量',
+            value: 392830,
+            unit: 'kg'
         }
     ],
-    axis: ['棉花', '玉米', '小麦', '红枣', '苹果', '葡萄']
+    echarts: {
+        series: [
+            {
+                name: '计划',
+                data: [3752.85, 1576.58, 1603.52, 620.2425]
+            },
+            {
+                name: '实际',
+                data: [3752.85, 1603.52, 1576.58, 620.2425]
+            }
+        ],
+        axis: ['第一批', '第二批', '第三批', '第四批']
+    }
 }
 
-module.exports = { data1, data2, data3, data4, data5, data6, data7, data8 }
+// 设备统计
+const data3 = {
+    count: [
+        {
+            name: '全部',
+            value: 324
+        },
+        {
+            name: '虫情灯',
+            value: 123
+        },
+        {
+            name: '气象站',
+            value: 23
+        },
+        {
+            name: '孢子捕捉',
+            value: 42
+        },
+        {
+            name: '监控',
+            value: 52
+        },
+        {
+            name: '蚕房检测',
+            value: 213
+        }
+    ],
+    table: [
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '正常',
+            status: 1
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '离线',
+            status: 2
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '未连接',
+            status: 3
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '正常',
+            status: 1
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '离线',
+            status: 2
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '未连接',
+            status: 3
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '正常',
+            status: 1
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '离线',
+            status: 2
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '未连接',
+            status: 3
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '正常',
+            status: 1
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '离线',
+            status: 2
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '未连接',
+            status: 3
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '正常',
+            status: 1
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '离线',
+            status: 2
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '未连接',
+            status: 3
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '正常',
+            status: 1
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '离线',
+            status: 2
+        },
+        {
+            deviceName: 'XXXX设备',
+            company: 'XXXX单位',
+            statusLabel: '未连接',
+            status: 3
+        }
+    ]
+}
+
+module.exports = { data1, data2, data3 }

@@ -7,7 +7,7 @@ import request from '@/plugins/axios'
  * {{name}}
  */
 export const I{{toUpperCaseHump key}}: any = (param: object) => {
-    return request({ url: '', param: param }, async (res: any) => {
+    return request.post({ url: '', param: param }, async (res: any) => {
         const dist: any = {{{stringify copyData}}}
 
         return dist

@@ -1,8 +1,8 @@
-const { data1, data2, data3, data4, data5, data6, data7, data8 } = require('../user-data/index.js')
+const { data1, data2, data3, data4, data5, data6, data7 } = require('../user-data/index.js')
 
 module.exports = {
-    name: '桑蚕产业资源一张图',
-    key: 'resources',
+    name: '桑蚕产业管理一张图',
+    key: 'manage',
     prefix: '',
     layout: [
         {
@@ -10,37 +10,34 @@ module.exports = {
             height: '19.35%',
             children: [
                 {
-                    name: '资源状况',
-                    key: 'base-status',
-                    height: '100%',
-                    copy: '',
+                    name: '单位',
+                    key: 'base-company',
                     copyData: data1
-                }
-            ]
-        },
-        {
-            width: '43.47%',
-            height: '19.35%',
-            children: [
+                },
                 {
-                    name: '今年计划与进展',
-                    key: 'base-plan',
-                    height: '100%',
-                    copy: '',
+                    name: '蚕房环境监测',
+                    key: 'base-count',
                     copyData: data2
-                }
-            ]
-        },
-        {
-            width: '30.43%',
-            height: '100%',
-            children: [
+                },
                 {
-                    name: '设备统计',
+                    name: '设备监测',
                     key: 'base-devices',
-                    height: '100%',
-                    copy: '',
                     copyData: data3
+                },
+                {
+                    name: '预警记录',
+                    key: 'base-warning',
+                    copyData: data4
+                },
+                {
+                    name: '小蚕房监控建议',
+                    key: 'base-house-small',
+                    copyData: data5
+                },
+                {
+                    name: '大蚕房监控建议',
+                    key: 'base-house-big',
+                    copyData: data6
                 }
             ]
         }

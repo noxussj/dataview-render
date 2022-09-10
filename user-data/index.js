@@ -1,45 +1,5 @@
-// 单位
+// 气象站
 const data1 = [
-    {
-        name: '石坝村（小蚕房）',
-        value: '1'
-    },
-    {
-        name: '鱼塘（小蚕房）',
-        value: '2'
-    },
-    {
-        name: '大连村（小蚕房）',
-        value: '3'
-    },
-    {
-        name: '朱场（大蚕房）',
-        value: '4'
-    },
-    {
-        name: '永华（大蚕房）',
-        value: '5'
-    },
-    {
-        name: '桃坪（大蚕房）',
-        value: '6'
-    },
-    {
-        name: '石坝村（桑园）',
-        value: '7'
-    },
-    {
-        name: '永华（桑园）',
-        value: '8'
-    },
-    {
-        name: '桃坪（桑园）',
-        value: '9'
-    }
-]
-
-// 蚕房环境监测
-const data2 = [
     {
         name: '温度',
         value: '30.5',
@@ -62,37 +22,123 @@ const data2 = [
         key: 'beam'
     },
     {
-        name: '一氧化碳',
-        value: '0',
-        unit: 'ppm',
-        reference: '0-20ppm',
-        key: 'monoxide'
+        name: '风速',
+        value: '2',
+        unit: 'm/s',
+        reference: '0-8m/s',
+        key: 'windSpeed'
     },
     {
-        name: '二氧化碳',
-        value: '32',
-        unit: 'ppm',
-        reference: '0-20ppm',
-        key: 'dioxide'
+        name: '大气压',
+        value: '1210',
+        unit: 'hPa',
+        reference: '300-1250hPa',
+        key: 'pressure'
     },
     {
-        name: '二氧化硫',
-        value: '2000',
-        unit: 'ppm',
-        reference: '0-20ppm',
-        key: 'sulfur'
-    },
-    {
-        name: '氨气',
-        value: '12',
-        unit: 'ppm',
-        reference: '0-20ppm',
-        key: 'ammonia'
+        name: '降雨量',
+        value: '22',
+        unit: 'mm/h',
+        reference: '0-22mm/s',
+        key: 'rainfall'
     }
 ]
 
-// 设备监测（统计）
+// 土壤监测
+const data2 = [
+    {
+        name: '土壤温度',
+        value: '27.1',
+        unit: '­°C',
+        reference: '25.5-28.5­°C',
+        key: 'humidity'
+    },
+    {
+        name: '土壤湿度',
+        value: '20',
+        unit: '­%',
+        reference: '60.5-80.5%',
+        key: 'humidity'
+    },
+    {
+        name: '土壤EC值',
+        value: '1.889',
+        unit: 'ds/m',
+        reference: '0-1.999ds/m',
+        key: 'ec'
+    }
+]
+
+// 本月桑园虫情预警
 const data3 = {
+    count: {
+        count: '123', // 预警总数
+        catch: '2134', // 捕捉量
+        warningtype: '桑瘿蚊、桑螟、桑粉虱', // 预警总数
+        warningCount: '5' // 预警类型统计
+    },
+    echarts: [
+        {
+            name: '桑粉虱',
+            value: '15'
+        },
+        {
+            name: '桑螟',
+            value: '132'
+        },
+        {
+            name: '桑瘿蚊',
+            value: '46'
+        },
+        {
+            name: '其他',
+            value: '12'
+        }
+    ]
+}
+
+// 24小时孢子捕捉
+const data4 = {
+    content: [
+        {
+            name: '采集流量',
+            value: '0.5',
+            unit: 'm/s'
+        },
+        {
+            name: '采集时间',
+            value: '1-24',
+            unit: '小时'
+        },
+        {
+            name: '抽气时间',
+            value: '1-24',
+            unit: '小时'
+        },
+        {
+            name: '培养仓温设定',
+            value: '25 ',
+            unit: '°C'
+        }
+    ],
+    images: [
+        {
+            name: '桑园捕捉记录1',
+            url: ''
+        },
+        {
+            name: '桑园捕捉记录2',
+            url: ''
+        },
+        {
+            name: '桑园捕捉记录3',
+            url: ''
+        }
+    ]
+}
+
+// 设备监测
+const data5 = {
     count: [
         {
             name: '全部',
@@ -161,90 +207,4 @@ const data3 = {
     ]
 }
 
-// 预警记录
-const data4 = [
-    {
-        name: '温度过高',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '二氧化流超标',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '温度超标预警',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '二氧化碳过高',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '温度过高',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '二氧化流超标',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '温度超标预警',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '二氧化碳过高',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '二氧化流超标',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '温度超标预警',
-        dateTime: '2022-08-19  12:09:12'
-    },
-    {
-        name: '二氧化碳过高',
-        dateTime: '2022-08-19  12:09:12'
-    }
-]
-
-// 小蚕房监控建议
-const data5 = {
-    status: '每天2-3次，每次10分钟以上，给桑前进行。',
-    table: [
-        {
-            age: '1',
-            temperature: '27-28',
-            difference: '0.5-1'
-        },
-        {
-            age: '2',
-            temperature: '27-28',
-            difference: '1-1.5'
-        },
-        {
-            age: '3',
-            temperature: '27-28',
-            difference: '1.5-2'
-        }
-    ]
-}
-
-// 大蚕房监控建议
-const data6 = [
-    {
-        age: '4',
-        temperature: '27-28',
-        difference: '0.5-1',
-        status: '每天3-4次'
-    },
-    {
-        age: '5',
-        temperature: '27-28',
-        difference: '1-1.5',
-        status: '每天3-4次'
-    }
-]
-
-module.exports = { data1, data2, data3, data4, data5, data6 }
+module.exports = { data1, data2, data3, data4, data5 }

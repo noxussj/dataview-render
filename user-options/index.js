@@ -10,34 +10,29 @@ module.exports = {
             height: '19.35%',
             children: [
                 {
-                    name: '单位',
-                    key: 'base-company',
+                    name: '气象站',
+                    key: 'base-weather',
                     copyData: data1
                 },
                 {
-                    name: '蚕房环境监测',
-                    key: 'base-count',
+                    name: '土壤监测',
+                    key: 'base-soil',
                     copyData: data2
+                },
+                {
+                    name: '本月桑园虫情预警',
+                    key: 'base-warning',
+                    copyData: data3
+                },
+                {
+                    name: '24小时孢子捕捉',
+                    key: 'base-spore',
+                    copyData: data4
                 },
                 {
                     name: '设备监测',
                     key: 'base-devices',
-                    copyData: data3
-                },
-                {
-                    name: '预警记录',
-                    key: 'base-warning',
-                    copyData: data4
-                },
-                {
-                    name: '小蚕房监控建议',
-                    key: 'base-house-small',
                     copyData: data5
-                },
-                {
-                    name: '大蚕房监控建议',
-                    key: 'base-house-big',
-                    copyData: data6
                 }
             ]
         }

@@ -1,18 +1,18 @@
 <template>
-    <!-- 预警记录 -->
-    <div class="manage__base-warning">
+    <!-- 本月桑园虫情预警 -->
+    <div class="managegarden__base-warning">
         base-warning
     </div>
 </template>
 
 <script lang="ts" setup>
-import { IBaseWarning } from '@/api/manage/index';
+import { IBaseWarning } from '@/api/manage/garden/index';
 
 const data = await IBaseWarning()
 </script>
 
 <style lang="scss" scoped>
-.manage__base-warning {
+.managegarden__base-warning {
     height: 100%
 }
 </style>

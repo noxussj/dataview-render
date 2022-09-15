@@ -2,8 +2,8 @@ const { data1, data2, data3, data4, data5, data6, data7 } = require('../user-dat
 
 module.exports = {
     name: '桑蚕产业管理一张图',
-    key: 'manage',
-    prefix: '',
+    key: 'garden',
+    prefix: 'manage',
     layout: [
         {
             width: '26.08%',

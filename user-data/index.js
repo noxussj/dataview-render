@@ -1,5 +1,5 @@
 // 小程序实时用户统计
-export const data1 = {
+const data1 = {
     updateDateTime: '2022-08-12 14:27:23',
     count: [
         {
@@ -30,7 +30,7 @@ export const data1 = {
 }
 
 // 趋势分析
-export const data2 = {
+const data2 = {
     series: [
         {
             name: '访问次数（次）',
@@ -49,7 +49,7 @@ export const data2 = {
 }
 
 // 专家咨询服务统计
-export const data3 = [
+const data3 = [
     {
         name: '服务用户',
         value: 3452,
@@ -63,13 +63,13 @@ export const data3 = [
 ]
 
 // 咨询关键词统计TOP5
-export const data4 = {
+const data4 = {
     series: [18, 17, 15, 13, 2],
     axis: ['环境监测', '饲育技术', '消毒', '预防化肥', '施肥']
 }
 
 // 资询趋势分析
-export const data5 = {
+const data5 = {
     series: [
         {
             name: '咨询量（次）',
@@ -84,7 +84,7 @@ export const data5 = {
 }
 
 // 用户反馈分析
-export const data6 = [
+const data6 = [
     {
         name: '觉得有用',
         value: 46
@@ -96,7 +96,7 @@ export const data6 = [
 ]
 
 // 政策资讯统计
-export const data7 = {
+const data7 = {
     count: 123,
     echarts: [
         {
@@ -118,7 +118,7 @@ export const data7 = {
 }
 
 // 技术教程统计
-export const data8 = [
+const data8 = [
     {
         name: '技术教程共计',
         value: 353,
@@ -127,13 +127,15 @@ export const data8 = [
 ]
 
 // 主题统计TOP5
-export const data9 = {
+const data9 = {
     series: [18, 17, 15, 13, 2],
     axis: ['环境监测', '饲育技术', '消毒', '预防化肥', '施肥']
 }
 
 // 收藏、点赞、分享统计
-export const data10 = {
+const data10 = {
     series: [59, 39, 2],
     axis: ['分享用户占比', '点赞用户占比', '收藏用户占比']
 }
+
+module.exports = { data1, data2, data3, data4, data5, data6, data7, data8, data9, data10 }

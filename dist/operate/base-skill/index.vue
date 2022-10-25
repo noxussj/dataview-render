@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IBaseSkill } from '@/api//operate/index';
+import { IBaseSkill } from '@/api/operate';
 
 const data = await IBaseSkill()
 </script>

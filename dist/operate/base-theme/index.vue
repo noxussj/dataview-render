@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IBaseTheme } from '@/api//operate/index';
+import { IBaseTheme } from '@/api/operate';
 
 const data = await IBaseTheme()
 </script>

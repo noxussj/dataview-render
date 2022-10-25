@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IBaseKeyword } from '@/api//operate/index';
+import { IBaseKeyword } from '@/api/operate';
 
 const data = await IBaseKeyword()
 </script>

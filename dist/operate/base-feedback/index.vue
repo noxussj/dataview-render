@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IBaseFeedback } from '@/api//operate/index';
+import { IBaseFeedback } from '@/api/operate';
 
 const data = await IBaseFeedback()
 </script>

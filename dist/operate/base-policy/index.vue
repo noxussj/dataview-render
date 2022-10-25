@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IBasePolicy } from '@/api//operate/index';
+import { IBasePolicy } from '@/api/operate';
 
 const data = await IBasePolicy()
 </script>

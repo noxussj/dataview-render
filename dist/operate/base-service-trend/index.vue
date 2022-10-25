@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IBaseServiceTrend } from '@/api//operate/index';
+import { IBaseServiceTrend } from '@/api/operate';
 
 const data = await IBaseServiceTrend()
 </script>

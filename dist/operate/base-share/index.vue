@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IBaseShare } from '@/api//operate/index';
+import { IBaseShare } from '@/api/operate';
 
 const data = await IBaseShare()
 </script>

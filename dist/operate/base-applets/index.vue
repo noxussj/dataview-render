@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IBaseApplets } from '@/api//operate/index';
+import { IBaseApplets } from '@/api/operate';
 
 const data = await IBaseApplets()
 </script>

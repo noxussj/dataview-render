@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { I{{toUpperCaseHump key}} } from '@/api/{{parent.prefix}}/{{parent.key}}/index';
+import { I{{toUpperCaseHump key}} } from '@/api/{{#if parent.prefix}}{{parent.prefix}}/{{/if}}{{parent.key}}';
 
 const data = await I{{toUpperCaseHump key}}()
 </script>

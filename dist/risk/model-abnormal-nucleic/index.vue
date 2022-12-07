@@ -1,16 +1,16 @@
 <template>
-    <!-- {{name}} -->
-    <app-card title="{{name}}">
-        <div class="{{modelClassName parent.prefix}}{{parent.key}}__{{key}}">
+    <!-- 核酸异常统计 -->
+    <app-card title="核酸异常统计">
+        <div class="risk__model-abnormal-nucleic">
             <line-simple area-gradient :color="color" :data="data" :opt="opt" smooth />
         </div>
     </app-card>
 </template>
 
 <script lang="ts" setup>
-import { I{{toUpperCaseHump key}} } from '@/api/{{parent.prefix}}{{parent.key}}/index';
+import { IModelAbnormalNucleic } from '@/api/risk/index';
 
-const data = await I{{toUpperCaseHump key}}()
+const data = await IModelAbnormalNucleic()
 
 /**
  * 图表配置
@@ -25,7 +25,7 @@ const opt = {
 </script>
 
 <style lang="scss" scoped>
-.{{modelClassName parent.prefix}}{{parent.key}}__{{key}} {
+.risk__model-abnormal-nucleic {
     height: 100%
 }
 </style>

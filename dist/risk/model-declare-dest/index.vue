@@ -1,16 +1,16 @@
 <template>
-    <!-- {{name}} -->
-    <app-card title="{{name}}">
-        <div class="{{modelClassName parent.prefix}}{{parent.key}}__{{key}}">
+    <!-- 申报统计-目的地 -->
+    <app-card title="申报统计-目的地">
+        <div class="risk__model-declare-dest">
             <line-simple area-gradient :color="color" :data="data" :opt="opt" smooth />
         </div>
     </app-card>
 </template>
 
 <script lang="ts" setup>
-import { I{{toUpperCaseHump key}} } from '@/api/{{parent.prefix}}{{parent.key}}/index';
+import { IModelDeclareDest } from '@/api/risk/index';
 
-const data = await I{{toUpperCaseHump key}}()
+const data = await IModelDeclareDest()
 
 /**
  * 图表配置
@@ -25,7 +25,7 @@ const opt = {
 </script>
 
 <style lang="scss" scoped>
-.{{modelClassName parent.prefix}}{{parent.key}}__{{key}} {
+.risk__model-declare-dest {
     height: 100%
 }
 </style>

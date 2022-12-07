@@ -1,16 +1,16 @@
 <template>
-    <!-- {{name}} -->
-    <app-card title="{{name}}">
-        <div class="{{modelClassName parent.prefix}}{{parent.key}}__{{key}}">
+    <!-- 异常打卡统计 -->
+    <app-card title="异常打卡统计">
+        <div class="risk__model-sign-abnormal">
             <line-simple area-gradient :color="color" :data="data" :opt="opt" smooth />
         </div>
     </app-card>
 </template>
 
 <script lang="ts" setup>
-import { I{{toUpperCaseHump key}} } from '@/api/{{parent.prefix}}{{parent.key}}/index';
+import { IModelSignAbnormal } from '@/api/risk/index';
 
-const data = await I{{toUpperCaseHump key}}()
+const data = await IModelSignAbnormal()
 
 /**
  * 图表配置
@@ -25,7 +25,7 @@ const opt = {
 </script>
 
 <style lang="scss" scoped>
-.{{modelClassName parent.prefix}}{{parent.key}}__{{key}} {
+.risk__model-sign-abnormal {
     height: 100%
 }
 </style>

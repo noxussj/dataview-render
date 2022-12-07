@@ -2,7 +2,7 @@
     <!-- {{name}} -->
     <app-card title="{{name}}">
         <div class="{{modelClassName parent.prefix}}{{parent.key}}__{{key}}">
-            <line-simple area-gradient :color="color" :data="data" :opt="opt" smooth />
+            <barx-multiple-line :bar-width="barWidth" :color="color" :data="data" :opt="opt" show-background />
         </div>
     </app-card>
 </template>
@@ -15,12 +15,13 @@ const data = await I{{toUpperCaseHump key}}()
 /**
  * 图表配置
  */
+const barWidth = 20
 const color = []
 const opt = {
     legend: {
         left: 'center'
     },
-    yAxis: [{ name: '单位：人次' }]
+    yAxis: [{ name: '单位：人数' }, { name: '佩戴比例：%' }]
 }
 </script>
 

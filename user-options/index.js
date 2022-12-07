@@ -1,8 +1,8 @@
-const { data1, data2, data3, data4, data5, data6, data7, data8, data9, data10 } = require('../user-data/index.js')
+const { data1, data2, data3, data4, data5, data6, data7 } = require('../user-data/index.js')
 
 module.exports = {
-    name: '桑蚕产业运营一张图',
-    key: 'operate',
+    name: '风险分析',
+    key: 'risk',
     prefix: '',
     layout: [
         {
@@ -10,54 +10,45 @@ module.exports = {
             height: '19.35%',
             children: [
                 {
-                    name: '小程序实时用户统计',
-                    key: 'base-applets',
+                    name: '申报统计-来源地',
+                    key: 'model-declare-source',
+                    copy: 'barx-multiple-line',
                     copyData: data1
                 },
                 {
-                    name: '趋势分析',
-                    key: 'base-trend',
+                    name: '申报统计-目的地',
+                    key: 'model-declare-dest',
+                    copy: 'line-simple',
                     copyData: data2
                 },
                 {
-                    name: '专家咨询服务统计',
-                    key: 'base-service-count',
+                    name: '行程卡打卡统计',
+                    key: 'model-sign-travel',
+                    copy: 'barx-multiple-line',
                     copyData: data3
                 },
                 {
-                    name: '咨询关键词统计TOP5',
-                    key: 'base-keyword',
+                    name: '异常打卡统计',
+                    key: 'model-sign-abnormal',
+                    copy: 'line-simple',
                     copyData: data4
                 },
                 {
-                    name: '资询趋势分析',
-                    key: 'base-service-trend',
+                    name: '场所异常打卡统计',
+                    key: 'model-abnormal-place',
+                    copy: 'barx-multiple-line',
                     copyData: data5
                 },
                 {
-                    name: '用户反馈分析',
-                    key: 'base-feedback',
+                    name: '核酸异常统计',
+                    key: 'model-abnormal-nucleic',
+                    copy: 'line-simple',
                     copyData: data6
                 },
                 {
-                    name: '政策资讯统计',
-                    key: 'base-policy',
+                    name: '统计模块',
+                    key: 'model-count',
                     copyData: data7
-                },
-                {
-                    name: '技术教程统计',
-                    key: 'base-skill',
-                    copyData: data8
-                },
-                {
-                    name: '主题统计TOP5',
-                    key: 'base-theme',
-                    copyData: data9
-                },
-                {
-                    name: '收藏、点赞、分享统计',
-                    key: 'base-share',
-                    copyData: data10
                 }
             ]
         }
